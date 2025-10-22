@@ -53,15 +53,9 @@ const Navber = () => {
         <div className="navbar-end flex items-center gap-3">
           <Link
             to="/login"
-            className="px-3 py-1.5 rounded-md border border-indigo-600 text-indigo-600 hover:bg-indigo-50 focus:outline-none"
+            className="px-5 py-2 text-lg rounded-md bg-indigo-600 text-white hover:bg-indigo-700 focus:outline-none"
           >
             Login
-          </Link>
-          <Link
-            to="/register"
-            className="px-3 py-1.5 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 focus:outline-none"
-          >
-            Register
           </Link>
         </div>
       </div>

@@ -5,6 +5,8 @@ import Home from "../Pages/Home";
 import Services from "../Pages/Services";
 import Profile from "../Pages/Profile";
 import DetailsService from "../Pages/DetailsService";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
         path: "/popular-section/:id",
         element: <DetailsService />,
         loader: () => fetch("/service.json"),
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
       },
     ],
   },

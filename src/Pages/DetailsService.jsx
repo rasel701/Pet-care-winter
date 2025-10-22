@@ -83,7 +83,7 @@ const DetailsService = () => {
               />
               <button
                 type="submit"
-                className="bg-indigo-600  text-white py-3 rounded-lg font-semibold transition"
+                className="bg-indigo-600  text-white py-3 rounded-lg font-semibold cursor-pointer"
               >
                 Book Now
               </button>
