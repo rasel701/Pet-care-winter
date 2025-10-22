@@ -1,0 +1,74 @@
+[
+  {
+    "serviceId": 101,
+    "serviceName": "Pet Hydration & Skin Check-up",
+    "providerName": "Dr. Paws Vet Clinic",
+    "providerEmail": "info@drpaws.com",
+    "price": 45,
+    "rating": 4.7,
+    "slotsAvailable": 5,
+    "description": "During winter, pets often suffer from dry skin and dehydration. This comprehensive service includes a full skin moisture test, hydration evaluation, and guidance on improving skin health using safe moisturizers and supplements to keep your furry friend comfortable throughout the season.",
+    "image": "https://www.shutterstock.com/image-photo/veterinarian-checks-dogs-skin-turgor-260nw-1943682097.jpg",
+    "category": "Health Check"
+  },
+  {
+    "serviceId": 102,
+    "serviceName": "Heated Bedding Installation & Safety",
+    "providerName": "CozyHomes Pet Solutions",
+    "providerEmail": "support@cozyhomes.com",
+    "price": 60,
+    "rating": 4.9,
+    "slotsAvailable": 2,
+    "description": "Keep your pets warm and safe this winter with our professional heated bedding installation. We ensure your electric mats and pet beds are installed safely, temperature-regulated, and energy-efficient. Includes a thermostat training session for pet owners to monitor comfort levels.",
+    "image": "https://m.media-amazon.com/images/I/61Md4lL42oL.jpg",
+    "category": "Home Setup"
+  },
+  {
+    "serviceId": 103,
+    "serviceName": "Snow & Ice Paw Protector Waxing",
+    "providerName": "Paws & Trails Grooming",
+    "providerEmail": "hello@pawstrails.com",
+    "price": 20,
+    "rating": 4.8,
+    "slotsAvailable": 8,
+    "description": "Winter roads and icy paths can harm your pet’s paws. Our non-toxic protective paw waxing treatment helps shield against salt, frostbite, and dryness. It keeps your pet’s paws soft, strong, and healthy, ensuring every snowy walk stays safe and enjoyable for your companion.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW1T5sBrB5uImaw89VWgHeP_s6bb87SXopkQ&s",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 104,
+    "serviceName": "Winter Emergency Pet Sitting (24hr)",
+    "providerName": "Shelter & Love Sitters",
+    "providerEmail": "booking@shelterlove.com",
+    "price": 95,
+    "rating": 4.6,
+    "slotsAvailable": 3,
+    "description": "When severe winter weather strikes or sudden travel plans arise, our emergency 24-hour pet sitting service ensures your pets are safe, warm, and cared for indoors. We provide meals, playtime, and companionship, keeping them stress-free and happy in your absence.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdy7ytRaDSBAFnFP_oye5tLMVQ_skdGfW97w&s",
+    "category": "Boarding"
+  },
+  {
+    "serviceId": 105,
+    "serviceName": "Cold Weather Diet Planning & Review",
+    "providerName": "NutriPet Experts",
+    "providerEmail": "consult@nutripet.com",
+    "price": 55,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Our nutrition specialists design custom winter diet plans tailored to your pet’s breed, size, and activity level. We review calorie intake, suggest warm, energy-rich meals, and ensure essential nutrients are balanced for maintaining body heat, vitality, and immunity in cold weather.",
+    "image": "https://www.petassure.com/petassure/file-streams/page/ad2EcyBJjI3Vl5aLWDYwM1dog%20diet.jpg",
+    "category": "Nutrition"
+  },
+  {
+    "serviceId": 106,
+    "serviceName": "Indoor Mental Stimulation Games Session",
+    "providerName": "Brainy Paws Training",
+    "providerEmail": "train@brainypaws.com",
+    "price": 35,
+    "rating": 4.7,
+    "slotsAvailable": 6,
+    "description": "Cold days can limit outdoor activities, but your pet’s mind can stay active! This session includes fun, engaging indoor games and puzzles designed to boost cognitive skills, reduce boredom, and strengthen your bond with your pet through creative and interactive playtime.",
+    "image": "https://www.shutterstock.com/image-photo/pet-supplies-accessories-dog-mental-600nw-2423485923.jpg",
+    "category": "Training"
+  }
+]

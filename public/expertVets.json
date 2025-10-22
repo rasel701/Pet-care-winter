@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Sara Hossain",
+    "specialty": "Pet Nutrition Specialist",
+    "experience": "8 years experience",
+    "email": "sara.hossain@petcare.com",
+    "description": "Dr. Sara is an expert in pet dietary planning and helps ensure every pet gets a healthy and balanced winter diet.",
+    "image": "https://img.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 2,
+    "name": "Dr. Rafi Ahmed",
+    "specialty": "Veterinary Surgeon",
+    "experience": "10 years experience",
+    "email": "rafi.ahmed@pawmedic.com",
+    "description": "A senior veterinary surgeon specializing in small animal care and winter health checkups.",
+    "image": "https://www.shutterstock.com/image-photo/portrait-handsome-male-doctor-stethoscope-600nw-2480850611.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Dr. Liza Karim",
+    "specialty": "Pet Skin & Coat Expert",
+    "experience": "6 years experience",
+    "email": "liza.karim@cozypaws.com",
+    "description": "Dr. Liza focuses on protecting pets’ skin and fur during harsh winter conditions.",
+    "image": "https://images.pexels.com/photos/5998482/pexels-photo-5998482.jpeg?_gl=1*elsl3n*_ga*MTM0NDYzODQ4MC4xNzYwODgxNzU4*_ga_8JE65Q40S6*czE3NjExMzg4MzUkbzIkZzEkdDE3NjExMzg5MzckajYwJGwwJGgw"
+  },
+  {
+    "id": 4,
+    "name": "Dr. Mehedi Rahman",
+    "specialty": "Animal Behavior Consultant",
+    "experience": "7 years experience",
+    "email": "mehedi.rahman@happyvets.com",
+    "description": "Expert in animal behavior and stress management during cold seasons.",
+    "image": "https://images.pexels.com/photos/32205061/pexels-photo-32205061.jpeg?_gl=1*1anb6jq*_ga*MTM0NDYzODQ4MC4xNzYwODgxNzU4*_ga_8JE65Q40S6*czE3NjExMzg4MzUkbzIkZzEkdDE3NjExMzg4NjIkajMzJGwwJGgw"
+  }
+]
