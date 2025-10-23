@@ -1,13 +1,16 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { IoIosEyeOff } from "react-icons/io";
 import { FaRegEye } from "react-icons/fa";
 import { Link } from "react-router";
-import { AuthUserContext } from "../assets/context/AuthContext";
+import { AuthUserContext } from "../context/AuthContext";
 import toast from "react-hot-toast";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
-  const { loginUser } = useContext(AuthUserContext);
+  const { loginUser, googleLogin, forgetPassword } =
+    useContext(AuthUserContext);
   const [show, setShow] = useState(false);
+  const emailRef = useRef();
 
   const handleLoginUser = (e) => {
     e.preventDefault();
@@ -24,6 +27,33 @@ const Login = () => {
       });
   };
 
+  const handleGooogleLogin = () => {
+    googleLogin()
+      .then((res) => {
+        console.log(res);
+        toast.success("Google login successfully!");
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error(error.message);
+      });
+  };
+
+  const handleResetPassword = () => {
+    const email = emailRef.current.value;
+    if (email === "") {
+      toast.error("Please enter your email");
+      return;
+    }
+
+    forgetPassword(email)
+      .then(() => {
+        toast.success("Please check your email. and set new password");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
   return (
     <div>
       <main className="mx-auto flex min-h-screen w-full items-center justify-center bg-gray-900 text-white">
@@ -36,6 +66,7 @@ const Login = () => {
                 type="email"
                 name="email"
                 placeholder="Email "
+                ref={emailRef}
                 required
                 className="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
               />
@@ -70,12 +101,22 @@ const Login = () => {
             </div>
           </form>
 
-          <a
-            href="#"
+          <div className="flex justify-center">
+            <button
+              onClick={handleGooogleLogin}
+              className="flex justify-center items-center border-1 px-10 py-2 gap-2 rounded-lg my-2 cursor-pointer border-gray-400"
+            >
+              <FcGoogle size={26} />{" "}
+              <span className="text-[17px]">Login with google</span>
+            </button>
+          </div>
+
+          <button
+            onClick={handleResetPassword}
             className="transform text-center font-semibold text-gray-500 "
           >
             FORGOT PASSWORD?
-          </a>
+          </button>
 
           <p className="text-center text-lg">
             No account ? Please

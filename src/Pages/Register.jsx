@@ -1,14 +1,16 @@
 import React, { useContext, useState } from "react";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 import { FcGoogle } from "react-icons/fc";
 import { IoIosEyeOff } from "react-icons/io";
 import { FaRegEye } from "react-icons/fa";
-import { AuthUserContext } from "../assets/context/AuthContext";
+import { AuthUserContext } from "../context/AuthContext";
 import { updateProfile } from "firebase/auth";
 import toast from "react-hot-toast";
 
 const Register = () => {
-  const { registerUser, user, setUser } = useContext(AuthUserContext);
+  const { registerUser, user, setUser, googleLogin, registerUpdaeInfo } =
+    useContext(AuthUserContext);
+  const navigate = useNavigate();
 
   const [show, setShow] = useState(false);
   const [passwordError, setPasswordError] = useState("");
@@ -35,18 +37,35 @@ const Register = () => {
 
     registerUser(email, password)
       .then((response) => {
-        updateProfile(response.user, { displayName: name, photoURL: photo })
+        const users = response.user;
+        registerUpdaeInfo({ displayName: name, photoURL: photo })
           .then(() => {
+            setUser(...users, { displayName: name, photoURL: photo });
+            console.log(users);
             toast.success("Signup successfully !");
-            setUser(response.user);
             e.target.reset();
             setPasswordError("");
+            navigate("/");
           })
           .catch((error) => {
             toast.error(error.message);
+            console.log(error);
           });
       })
       .catch((error) => {
+        toast.error(error.message);
+        console.log(error);
+      });
+  };
+
+  const handleGooogleLogin = () => {
+    googleLogin()
+      .then((res) => {
+        console.log(res);
+        toast.success("Google login successfully!");
+      })
+      .catch((error) => {
+        console.log(error);
         toast.error(error.message);
       });
   };
@@ -125,7 +144,10 @@ const Register = () => {
             </fieldset>
           </form>
           <div className="flex justify-center">
-            <button className="flex justify-center items-center border-1 px-5 py-2 gap-2 rounded-lg my-2 cursor-pointer border-gray-400">
+            <button
+              onClick={handleGooogleLogin}
+              className="flex justify-center items-center border-1 px-5 py-2 gap-2 rounded-lg my-2 cursor-pointer border-gray-400"
+            >
               <FcGoogle size={26} />{" "}
               <span className="text-[17px]">Login width google</span>
             </button>

@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import { RouterProvider } from "react-router";
 import router from "./Routes/Routes.jsx";
 import { Toaster } from "react-hot-toast";
-import AuthContext from "./assets/context/AuthContext.jsx";
+import AuthContext from "./context/AuthContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
