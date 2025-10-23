@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router";
+import { AuthUserContext } from "../assets/context/AuthContext";
+import toast from "react-hot-toast";
 
 const Navber = () => {
+  const { user, logoutUser, setUser } = useContext(AuthUserContext);
+
+  const handleLogoutUser = () => {
+    logoutUser()
+      .then(() => {
+        toast.success("Logout successfully !");
+        setUser(null);
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
+
   const links = (
     <>
       <li>
@@ -51,12 +66,31 @@ const Navber = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end flex items-center gap-3">
-          <Link
-            to="/login"
-            className="px-5 py-2 text-lg rounded-md bg-indigo-600 text-white hover:bg-indigo-700 focus:outline-none"
-          >
-            Login
-          </Link>
+          {user ? (
+            <img
+              className="w-[60px] h-[60px] rounded-full"
+              src={user?.photoURL}
+              alt=""
+            />
+          ) : (
+            ""
+          )}
+
+          {user ? (
+            <button
+              onClick={handleLogoutUser}
+              className="px-5 py-2 text-lg rounded-md bg-indigo-600 text-white hover:bg-indigo-700 focus:outline-none cursor-pointer"
+            >
+              Logout
+            </button>
+          ) : (
+            <Link
+              to="/login"
+              className="px-5 py-2 text-lg rounded-md bg-indigo-600 text-white hover:bg-indigo-700 focus:outline-none"
+            >
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </div>
