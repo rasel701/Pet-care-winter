@@ -34,7 +34,7 @@ const AuthContext = ({ children }) => {
     return () => {
       unsubscribe();
     };
-  }, []);
+  }, [user]);
 
   const logoutUser = () => {
     return signOut(auth);
@@ -58,6 +58,11 @@ const AuthContext = ({ children }) => {
     return updateProfile(auth.currentUser, infoObj);
   };
 
+  const updateUserProfile = (userObj) => {
+    console.log(userObj);
+    return updateProfile(auth.currentUser, userObj);
+  };
+
   return (
     <AuthUserContext.Provider
       value={{
@@ -71,6 +76,7 @@ const AuthContext = ({ children }) => {
         registerUpdaeInfo,
         loading,
         setLoading,
+        updateUserProfile,
       }}
     >
       {children}
