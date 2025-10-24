@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useState } from "react";
 import { IoIosEyeOff } from "react-icons/io";
 import { FaRegEye } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthUserContext } from "../context/AuthContext";
 import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
@@ -11,6 +11,9 @@ const Login = () => {
     useContext(AuthUserContext);
   const [show, setShow] = useState(false);
   const emailRef = useRef();
+  const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location);
 
   const handleLoginUser = (e) => {
     e.preventDefault();
@@ -20,6 +23,8 @@ const Login = () => {
       .then((res) => {
         console.log(res);
         toast.success("Login Successfully !");
+        e.target.reset();
+        navigate(location.state ? location.state?.pathname : "/");
       })
       .catch((error) => {
         console.log(error);
@@ -32,6 +37,7 @@ const Login = () => {
       .then((res) => {
         console.log(res);
         toast.success("Google login successfully!");
+        navigate(location.state ? location.state?.pathname : "/");
       })
       .catch((error) => {
         console.log(error);

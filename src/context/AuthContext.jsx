@@ -16,10 +16,10 @@ export const AuthUserContext = createContext("");
 const AuthContext = ({ children }) => {
   const googleProvider = new GoogleAuthProvider();
   const [user, setUser] = useState(null);
-
-  const userName = "Mosharrof Korim";
+  const [loading, setLoading] = useState(true);
 
   const registerUser = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
@@ -28,6 +28,7 @@ const AuthContext = ({ children }) => {
       if (currentUser) {
         setUser(currentUser);
       }
+      setLoading(false);
     });
 
     return () => {
@@ -40,6 +41,7 @@ const AuthContext = ({ children }) => {
   };
 
   const loginUser = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
@@ -52,6 +54,7 @@ const AuthContext = ({ children }) => {
   };
 
   const registerUpdaeInfo = (infoObj) => {
+    console.log(infoObj);
     return updateProfile(auth.currentUser, infoObj);
   };
 
@@ -66,7 +69,8 @@ const AuthContext = ({ children }) => {
         googleLogin,
         forgetPassword,
         registerUpdaeInfo,
-        userName,
+        loading,
+        setLoading,
       }}
     >
       {children}

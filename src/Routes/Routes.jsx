@@ -7,6 +7,7 @@ import Profile from "../Pages/Profile";
 import DetailsService from "../Pages/DetailsService";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import ProtectedRoute from "../Components/ProtectedRoute";
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/popular-section/:id",
-        element: <DetailsService />,
+        element: (
+          <ProtectedRoute>
+            <DetailsService />
+          </ProtectedRoute>
+        ),
         loader: () => fetch("/service.json"),
       },
       {

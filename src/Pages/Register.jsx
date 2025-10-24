@@ -40,7 +40,7 @@ const Register = () => {
         const users = response.user;
         registerUpdaeInfo({ displayName: name, photoURL: photo })
           .then(() => {
-            setUser(...users, { displayName: name, photoURL: photo });
+            setUser({ ...users, displayName: name, photoURL: photo });
             console.log(users);
             toast.success("Signup successfully !");
             e.target.reset();
@@ -63,6 +63,7 @@ const Register = () => {
       .then((res) => {
         console.log(res);
         toast.success("Google login successfully!");
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);
@@ -149,7 +150,7 @@ const Register = () => {
               className="flex justify-center items-center border-1 px-5 py-2 gap-2 rounded-lg my-2 cursor-pointer border-gray-400"
             >
               <FcGoogle size={26} />{" "}
-              <span className="text-[17px]">Login width google</span>
+              <span className="text-[17px]">Continue with Google</span>
             </button>
           </div>
           <p className="text-center">
