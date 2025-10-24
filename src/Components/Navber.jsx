@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link, NavLink } from "react-router";
 import { AuthUserContext } from "../context/AuthContext";
 import toast from "react-hot-toast";
+import logo from "../assets/create  a logo for _Pet care_.jpg";
 
 const Navber = () => {
   const { user, logoutUser, setUser } = useContext(AuthUserContext);
@@ -32,8 +33,8 @@ const Navber = () => {
   );
 
   return (
-    <div>
-      <div className="navbar bg-base-100 shadow-sm">
+    <div className="">
+      <div className="navbar bg-base-100 shadow-sm px-7 ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -55,15 +56,23 @@ const Navber = () => {
             </div>
             <ul
               tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-[16px] font-semibold"
             >
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <div className="w-[100px]">
+            <img
+              className="w-full h-15 object-cover "
+              src="https://t3.ftcdn.net/jpg/05/83/61/82/360_F_583618203_CwsMPkc6yoMBLOWsqD4doSyzedqI2qz5.jpg"
+              alt=""
+            />
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
+          <ul className="menu menu-horizontal px-1 text-[16px] font-semibold">
+            {links}
+          </ul>
         </div>
         <div className="navbar-end flex items-center gap-3">
           {user ? (
