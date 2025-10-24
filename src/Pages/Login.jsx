@@ -95,7 +95,10 @@ const Login = () => {
               )}
             </div>
             <div className="flex justify-center items-center my-5">
-              <button className="transform rounded-sm bg-indigo-600 py-3 font-bold duration-300 cursor-pointer px-7 ">
+              <button
+                type="submit"
+                className="transform rounded-sm bg-indigo-600 py-3 font-bold duration-300 cursor-pointer px-7 "
+              >
                 LOG IN
               </button>
             </div>

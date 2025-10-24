@@ -20,12 +20,12 @@ const DetailsService = () => {
   };
 
   return (
-    <div className="w-11/12 mx-auto flex my-20">
-      <div className="grid grid-cols-12">
-        <div className="col-span-8 bg-cyan-100 rounded-lg ">
-          <div className="flex gap-4 items-center">
+    <div className="w-11/12 mx-auto  my-20">
+      <div className="">
+        <div className=" bg-cyan-100 rounded-lg ">
+          <div className="flex flex-col lg:flex-row gap-5 justify-center items-center">
             <img
-              className="w-[550px] h-[400px] object-cover shadow-2xs"
+              className="w-[550px] h-[400px] object-cover shadow-2xs rounded-lg"
               src={service.image}
               alt=""
             />
@@ -56,7 +56,9 @@ const DetailsService = () => {
               </div>
             </div>
           </div>
-          <p className="text-gray-600 mt-7 p-2">{service.description}</p>
+          <p className="text-gray-600 mt-7 p-3 text-center">
+            {service.description}
+          </p>
         </div>
         <div className=" col-span-4 ">
           <div className="mt-10 bg-blue-50 rounded-2xl shadow-md p-6">
