@@ -8,6 +8,7 @@ import DetailsService from "../Pages/DetailsService";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import ProtectedRoute from "../Components/ProtectedRoute";
+import ForgotPassword from "../Pages/ForgotPassword";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/profile",
-        element: <Profile />,
+        element: (
+          <ProtectedRoute>
+            <Profile />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/popular-section/:id",
@@ -43,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path: "/forgot-password",
+        element: <ForgotPassword />,
       },
     ],
   },

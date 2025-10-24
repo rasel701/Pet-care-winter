@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useState } from "react";
 import { IoIosEyeOff } from "react-icons/io";
 import { FaRegEye } from "react-icons/fa";
-import { Link, useLocation, useNavigate } from "react-router";
+import { Link, Navigate, useLocation, useNavigate } from "react-router";
 import { AuthUserContext } from "../context/AuthContext";
 import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
@@ -52,13 +52,7 @@ const Login = () => {
       return;
     }
 
-    forgetPassword(email)
-      .then(() => {
-        toast.success("Please check your email. and set new password");
-      })
-      .catch((error) => {
-        toast.error(error.message);
-      });
+    navigate("/forgot-password", { state: { email } });
   };
   return (
     <div>
@@ -119,7 +113,7 @@ const Login = () => {
 
           <button
             onClick={handleResetPassword}
-            className="transform text-center font-semibold text-gray-500 "
+            className="transform text-center font-semibold text-gray-500 py-2 hover:underline "
           >
             FORGOT PASSWORD?
           </button>
