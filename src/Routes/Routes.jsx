@@ -9,11 +9,13 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import ProtectedRoute from "../Components/ProtectedRoute";
 import ForgotPassword from "../Pages/ForgotPassword";
+import LoadingSpinner from "../Components/LoadingSpinner";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayout />,
+    hydrateFallbackElement: <LoadingSpinner />,
     children: [
       {
         index: true,
@@ -23,6 +25,7 @@ const router = createBrowserRouter([
       {
         path: "/services",
         element: <Services />,
+        loader: () => fetch("/service.json"),
       },
       {
         path: "/profile",

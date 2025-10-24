@@ -4,7 +4,7 @@ import { AuthUserContext } from "../context/AuthContext";
 import toast from "react-hot-toast";
 
 const Navber = () => {
-  const { user, logoutUser, setUser, userName } = useContext(AuthUserContext);
+  const { user, logoutUser, setUser } = useContext(AuthUserContext);
 
   const handleLogoutUser = () => {
     logoutUser()
@@ -36,7 +36,6 @@ const Navber = () => {
       <div className="navbar bg-base-100 shadow-sm">
         <div className="navbar-start">
           <div className="dropdown">
-            <h2>{user?.displayName}</h2>
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +68,7 @@ const Navber = () => {
         <div className="navbar-end flex items-center gap-3">
           {user ? (
             <img
-              title={user.displayName}
+              title={user?.displayName}
               className="w-[60px] h-[60px] rounded-full"
               src={user?.photoURL}
               alt=""
@@ -86,12 +85,11 @@ const Navber = () => {
               Logout
             </button>
           ) : (
-            <Link
-              to="/login"
-              className="px-5 py-2 text-lg rounded-md bg-indigo-600 text-white hover:bg-indigo-700 focus:outline-none"
-            >
-              Login
-            </Link>
+            <button className="px-5 py-2 text-lg rounded-md bg-indigo-600 text-white hover:bg-indigo-700 focus:outline-none">
+              <Link to="/login">Login</Link>
+              {" / "}
+              <Link to={"/register"}>Register</Link>
+            </button>
           )}
         </div>
       </div>

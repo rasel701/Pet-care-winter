@@ -4,6 +4,7 @@ import PopularServices from "../Components/PopularServices";
 import { useLoaderData } from "react-router";
 import PetsTips from "../Components/petsTips";
 import ExpertVets from "../Components/ExpertVets";
+import WhyChooseUs from "../Components/WhyChooseUs";
 
 const Home = () => {
   const data = useLoaderData();
@@ -26,6 +27,9 @@ const Home = () => {
       </section>
       <section className="expertVest">
         <ExpertVets />
+      </section>
+      <section>
+        <WhyChooseUs />
       </section>
     </div>
   );

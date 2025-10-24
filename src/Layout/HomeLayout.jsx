@@ -1,15 +1,18 @@
 import React from "react";
 import Navber from "../Components/Navber";
-import { Outlet } from "react-router";
+import { Outlet, useNavigation } from "react-router";
+import LoadingSpinner from "../Components/LoadingSpinner";
 
 const HomeLayout = () => {
+  const navigation = useNavigation();
+  console.log(navigation);
   return (
     <div>
       <header>
         <Navber />
       </header>
       <main>
-        <Outlet />
+        {navigation.state === "loading" ? <LoadingSpinner /> : <Outlet />}
       </main>
     </div>
   );
