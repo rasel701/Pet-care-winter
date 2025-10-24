@@ -4,7 +4,7 @@ import { Link } from "react-router";
 const PopularServices = ({ item }) => {
   const { serviceId, serviceName, rating, price, image } = item;
   return (
-    <div className=" p-3 rounded-lg shadow-2xl">
+    <div data-aos="fade-up" className=" p-3 rounded-lg shadow-2xl">
       <img
         className="w-[90%] h-[300px] object-cover mx-auto rounded-lg"
         src={image}

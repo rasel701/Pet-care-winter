@@ -34,7 +34,10 @@ const PetsTips = () => {
           <h2 className="text-3xl font-bold mb-8 text-indigo-700">
             Winter Care Tips for Pets
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div
+            data-aos="fade-left"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
             {winterCareTips.map((tip) => (
               <div
                 key={tip.id}
