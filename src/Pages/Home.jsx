@@ -8,6 +8,7 @@ import WhyChooseUs from "../Components/WhyChooseUs";
 
 const Home = () => {
   const data = useLoaderData();
+  console.log(import.meta.env.VITE_Name);
 
   return (
     <div>

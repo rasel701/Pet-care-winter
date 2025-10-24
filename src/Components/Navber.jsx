@@ -2,11 +2,11 @@ import React, { useContext } from "react";
 import { Link, NavLink } from "react-router";
 import { AuthUserContext } from "../context/AuthContext";
 import toast from "react-hot-toast";
-import logo from "../assets/create  a logo for _Pet care_.jpg";
 
 const Navber = () => {
   const { user, logoutUser, setUser } = useContext(AuthUserContext);
 
+  console.log(user?.reloadUserInfo?.photoURL);
   const handleLogoutUser = () => {
     logoutUser()
       .then(() => {
@@ -79,7 +79,7 @@ const Navber = () => {
             <img
               title={user?.displayName}
               className="w-[60px] h-[60px] rounded-full"
-              src={user?.photoURL}
+              src={user?.photoURL || user?.reloadUserInfo?.photoURL}
               alt=""
             />
           ) : (
