@@ -1,16 +1,23 @@
-# React + Vite
+# PROJECT-NAME: Pets-care-winter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Live-link:https://pets-care-rasel.netlify.app/
 
-Currently, two official plugins are available:
+# Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User Authentication: Login and Register functionality for users.
+- Pet Care Cards: Display pet care services in card format.
+- Detailed View: Clicking on a card navigates to a detailed page.
+- Protected Routes: Certain pages are accessible only to authenticated users using React Router.
+- Responsive UI: Works well on different screen sizes.
 
-## React Compiler
+# NPM packages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. react-router
+2. tailwindcss
+3. daisyui
+4. firebase
+5. react-hot-toast
+6. react-icons
+7. react-spring
+8. swiper
+9. aos

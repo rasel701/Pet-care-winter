@@ -41,7 +41,7 @@ const Register = () => {
         registerUpdaeInfo({ displayName: name, photoURL: photo })
           .then(() => {
             setUser({ ...users, displayName: name, photoURL: photo });
-            console.log(users);
+
             toast.success("Signup successfully !");
             e.target.reset();
             setPasswordError("");
@@ -49,24 +49,23 @@ const Register = () => {
           })
           .catch((error) => {
             toast.error(error.message);
-            console.log(error);
+            // console.log(error);
           });
       })
       .catch((error) => {
         toast.error(error.message);
-        console.log(error);
+        // console.log(error);
       });
   };
 
   const handleGooogleLogin = () => {
     googleLogin()
       .then((res) => {
-        console.log(res);
         toast.success("Google login successfully!");
         navigate("/");
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         toast.error(error.message);
       });
   };

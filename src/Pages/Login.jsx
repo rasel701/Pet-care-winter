@@ -13,7 +13,6 @@ const Login = () => {
   const emailRef = useRef();
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location);
 
   const handleLoginUser = (e) => {
     e.preventDefault();
@@ -21,13 +20,12 @@ const Login = () => {
     const password = e.target.password.value;
     loginUser(email, password)
       .then((res) => {
-        console.log(res);
         toast.success("Login Successfully !");
         e.target.reset();
         navigate(location.state ? location.state?.pathname : "/");
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         toast.error(error.message);
       });
   };
@@ -35,12 +33,11 @@ const Login = () => {
   const handleGooogleLogin = () => {
     googleLogin()
       .then((res) => {
-        console.log(res);
         toast.success("Google login successfully!");
         navigate(location.state ? location.state?.pathname : "/");
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         toast.error(error.message);
       });
   };

@@ -7,7 +7,7 @@ const ExpertVets = () => {
 
   return (
     <div>
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white px-3">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-8 text-indigo-700">
             Meet Our Expert Vets
