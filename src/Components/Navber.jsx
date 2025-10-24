@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 const Navber = () => {
   const { user, logoutUser, setUser } = useContext(AuthUserContext);
 
-  console.log(user?.reloadUserInfo?.photoURL);
+  // console.log(user?.reloadUserInfo?.photoURL);
   const handleLogoutUser = () => {
     logoutUser()
       .then(() => {
@@ -33,8 +33,8 @@ const Navber = () => {
   );
 
   return (
-    <div className="">
-      <div className="navbar bg-base-100 shadow-sm px-7">
+    <div className=" border-4 w-full">
+      <div className="navbar bg-base-100 shadow-sm">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -56,7 +56,7 @@ const Navber = () => {
             </div>
             <ul
               tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-[16px] font-semibold"
+              className="menu z-10 menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-[16px] font-semibold"
             >
               {links}
             </ul>

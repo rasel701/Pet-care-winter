@@ -12,12 +12,10 @@ const ExpertVets = () => {
           <h2 className="text-3xl font-bold mb-8 text-indigo-700">
             Meet Our Expert Vets
           </h2>
-          <div
-            data-aos="flip-left"
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {vets.map((vet) => (
               <div
+                data-aos="flip-left"
                 key={vet.id}
                 className="bg-blue-50 p-6 rounded-2xl shadow-md hover:shadow-lg transition"
               >

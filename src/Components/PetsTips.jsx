@@ -34,12 +34,12 @@ const PetsTips = () => {
           <h2 className="text-3xl font-bold mb-8 text-indigo-700">
             Winter Care Tips for Pets
           </h2>
-          <div
-            data-aos="fade-left"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-2">
             {winterCareTips.map((tip) => (
               <div
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
                 key={tip.id}
                 className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition"
               >

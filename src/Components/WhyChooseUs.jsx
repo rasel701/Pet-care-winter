@@ -38,12 +38,10 @@ const WhyChooseUs = () => {
         Why <span className="text-indigo-600">Choose Us</span>
       </h2>
 
-      <div
-        data-aos="zoom-in-down"
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto px-4"
-      >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto px-4">
         {features.map((item) => (
           <div
+            data-aos="zoom-in-down"
             key={item.id}
             className="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl duration-300"
           >
